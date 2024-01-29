@@ -18,5 +18,6 @@ else:
 def iteration(elem: abc):
     elem.met1()
 
+
 for elem in our_list:
     iteration(elem)
