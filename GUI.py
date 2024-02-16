@@ -6,13 +6,13 @@ from flet import Theme
 class CellFabric:
     @staticmethod
     def generate_cell(x, y):
-        #button = ft.FilledButton(
+        # button = ft.FilledButton(
         #    text=str(x + y * 8),
         #    style=ft.ButtonStyle(
         #        shape=ft.RoundedRectangleBorder(radius=0),
         #        overlay_color=ft.colors.TRANSPARENT
         #    )
-        #)
+        # )
 
         cell = ft.Container(
             content=ft.Text(x + y * 8),
@@ -26,6 +26,9 @@ class CellFabric:
 
 
 def main(page: ft.Page):
+    page.window_width = 435
+    page.window_height = 455
+    page.window_resizable = False
     page.title = "checkers"
 
     page.theme = Theme(color_scheme_seed='green')
@@ -48,4 +51,5 @@ def main(page: ft.Page):
     page.update()
 
 
-ft.app(target=main)
+def start_GUI():
+    ft.app(target=main)
